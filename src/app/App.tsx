@@ -1,13 +1,13 @@
-import { classNames } from '../shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames';
 import './styles/index.scss';
-import { useTheme } from './providers/ThemeProvider/lib/useTheme';
-import { AppRouter } from './providers/routes';
-import { Navbar } from "widgets/Navbar";
+import { useTheme } from 'app/providers/ThemeProvider';
+import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
+import { AppRouter } from 'app/providers/routes';
 
-const App = () => {
-  const {theme} = useTheme()
+function App() {
+  const { theme } = useTheme();
 
   return (
     <div className={classNames('app', {}, [theme])}>
@@ -19,7 +19,7 @@ const App = () => {
         </div>
       </Suspense>
     </div>
-  )
+  );
 }
 
 export default App;
