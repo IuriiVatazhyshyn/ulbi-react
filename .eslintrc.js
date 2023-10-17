@@ -37,6 +37,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
+    'no-underscore-dangle': 'off',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -44,7 +45,8 @@ module.exports = {
     'no-shadow': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': 'off',
+    'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   globals: {
     __IS_DEV__: true,
